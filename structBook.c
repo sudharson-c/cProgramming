@@ -37,32 +37,35 @@ int main()
     printf("3.Costliest book index\n");
     printf("4.Search by Title\n");
     printf("5.Search by Publisher\n");
-    printf("6.Display book of same publishing year:");
+    printf("6.Display book of same publishing year:\n");
+    printf("7.Exit\nEnter Choice: ");
     scanf("%d", &u_choice);
-    switch (u_choice)
-    {
-    case 1:
-        displayBook(b);
-        break;
-    case 2:
-        displayAuthor(b);
-        break;
-    case 3:
-        costlyBook(b);
-        break;
-    case 4:
-        displayTitle(b);
-        break;
-    case 5:
-        displayPublisher(b);
-        break;
-    case 6:
-        displaySameYear(b);
-        break;
-    default:
-        printf("Enter proper choice");
-        break;
-    }
+    do{
+        switch (u_choice)
+        {
+        case 1:
+            displayBook(b);
+            break;
+        case 2:
+            displayAuthor(b);
+            break;
+        case 3:
+            costlyBook(b);
+            break;
+        case 4:
+            displayTitle(b);
+            break;
+        case 5:
+            displayPublisher(b);
+            break;
+        case 6:
+            displaySameYear(b);
+            break;
+        default:
+            printf("Enter proper choice");
+            break;
+        }
+    while(u_choice!=7);
 
     return 0;
 }
